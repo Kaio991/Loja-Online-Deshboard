@@ -11,7 +11,7 @@ if (formLogin) {
 
         try {
             // 1. Faz a chamada para o seu servidor Node.js
-            const response = await fetch('http://localhost:3000/usuarios/login', {
+            const response = await fetch('https://loja-online-deshboard-production.up.railway.app/usuarios/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, senha })

@@ -28,7 +28,7 @@ async function realizarPagamento() {
 
     try {
         // CHAMADA PARA A ROTA .put("/checkout/pagar/:id")
-        const response = await fetch(`http://localhost:3000/checkout/pagar/${pedidoId}`, {
+        const response = await fetch(`https://loja-online-deshboard-production.up.railway.app/checkout/pagar/${pedidoId}`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,

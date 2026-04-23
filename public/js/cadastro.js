@@ -11,7 +11,7 @@ if (formCadastro) {
         const cargo = "cliente";
 
         try {
-            const response = await fetch('http://localhost:3000/usuarios/cadastro', {
+            const response = await fetch('https://loja-online-deshboard-production.up.railway.app/usuarios/cadastro',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

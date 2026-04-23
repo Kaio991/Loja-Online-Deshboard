@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const res = await fetch('http://localhost:3000/checkout/listar', {
+        const res = await fetch('https://loja-online-deshboard-production.up.railway.app/checkout/listar', {
             headers: { 'Authorization': `Bearer ${token}` }
         });
 
@@ -48,7 +48,7 @@ async function verDetalhes(pedidoId) {
     const token = localStorage.getItem('token');
 
     try {
-        const res = await fetch(`http://localhost:3000/checkout/detalhes/${pedidoId}`, {
+        const res = await fetch(`https://loja-online-deshboard-production.up.railway.app/checkout/detalhes/${pedidoId}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
 
