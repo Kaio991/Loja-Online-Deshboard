@@ -1,0 +1,367 @@
+/* 1. CONFIGURAÇÕES GERAIS (Reset e Base) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* 2. TELAS DE LOGIN E CADASTRO (Módulo Auth) */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0f0f0f;
+}
+
+.auth-container {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.auth-container h2 {
+    color: #f0c040;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#formLogin,
+#formCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #2b2b2b;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.auth-container input:focus {
+    border-color: #f0c040;
+}
+
+.auth-container button {
+    background: #f0c040;
+    color: #000;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.auth-container button:hover {
+    background: #d4a72d;
+    transform: translateY(-2px);
+}
+
+.auth-footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.auth-footer a {
+    color: #f0c040;
+    font-weight: bold;
+}
+
+/* 3. CABEÇALHO (Header) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.search-container {
+    display: flex;
+    background: #2b2b2b;
+    border-radius: 25px;
+    padding: 5px 15px;
+    border: 1px solid #444;
+}
+
+.search-container input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    width: 150px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#carrinho-icon {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#carrinho-count {
+    background: #ff3e3e;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    font-weight: bold;
+}
+
+/* 4. VITRINE E CARRINHO (Grids) */
+.title-container {
+    text-align: center;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.main-title {
+    font-size: 2rem;
+    color: #f0c040;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #f0c040;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 50px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.produto-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 15px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-card:hover {
+    border-color: #f0c040;
+    transform: translateY(-5px);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* 5. TEXTOS E BOTÕES DE AÇÃO */
+.preco {
+    color: #2ecc71;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-adicionar,
+.btn-finalizar {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.btn-adicionar:hover {
+    background: #0056b3;
+}
+
+.btn-sair {
+    background: #f0c040;
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#user-greeting strong {
+    color: #f0c040;
+}
+
+.loading-text {
+    text-align: center;
+    width: 100%;
+    color: #f0c040;
+    grid-column: 1 / -1;
+}
+
+/* --- ESTILOS DA PÁGINA DE PAGAMENTO --- */
+
+.body-pagamento {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pagamento-container {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border: 1px solid #f0c040;
+    /* O seu dourado padrão */
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pagamento-container h1 {
+    color: #f0c040;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.pedido-info {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #252525;
+    border-radius: 8px;
+}
+
+.pix-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.pix-box img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+.btn-confirmar {
+    background-color: #f0c040;
+    color: #000;
+    border: none;
+    padding: 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-confirmar:hover {
+    background-color: #d4a733;
+    letter-spacing: 1px;
+}
+
+.btn-voltar {
+    margin-top: 20px;
+    display: block;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    color: #f0c040;
+}
+
+/* Badges de Status no Histórico */
+.status-badge {
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-badge.pago {
+    background-color: #2ecc71;
+    /* Verde */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+}
+
+.status-badge.aguardando-pagamento {
+    background-color: #f1c40f;
+    /* Amarelo */
+    color: #000;
+}

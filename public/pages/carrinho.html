@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Carrinho - E-commerce</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="user-greeting">
+            <span>Carrinho de <strong id="user-name">Visitante</strong></span>
+        </div>
+        <div class="header-right">
+            <button onclick="window.location.href='index.html'" class="btn-sair">Voltar à Loja</button>
+        </div>
+    </header>
+
+    <main class="title-container">
+        <h1 class="main-title">Seu Carrinho</h1>
+
+        <div id="itens-carrinho" class="produtos-grid">
+        </div>
+
+        <div id="resumo-compra" style="margin-top: 30px; text-align: center; display: none;">
+            <h2 id="total-carrinho" style="color: #2ecc71; font-size: 2rem;">Total: R$ 0,00</h2>
+            <br>
+            <button id="btn-finalizar" class="btn-adicionar" style="padding: 20px 50px;">Finalizar Pedido</button>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+
+</html>

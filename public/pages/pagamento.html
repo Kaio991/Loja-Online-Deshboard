@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="body-pagamento">
+    <div class="pagamento-container">
+        <h1>Finalizar Pedido</h1>
+
+        <div class="pedido-info">
+            Pedido #<span id="id-pedido-display">...</span>
+        </div>
+
+        <p>Aguardando pagamento via PIX...</p>
+
+        <div class="pix-box">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PROJETO_DO_KAIO" alt="QR Code">
+        </div>
+
+        <button onclick="realizarPagamento()" class="btn-confirmar">
+            Confirmar Pagamento
+        </button>
+
+        <a href="index.html" class="btn-voltar">Cancelar e voltar</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/pagamento.js"></script>
+</body>

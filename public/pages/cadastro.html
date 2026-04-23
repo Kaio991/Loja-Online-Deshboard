@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro - Minha Loja</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="auth-body">
+    <div class="auth-container">
+        <h2>Criar Conta</h2>
+        <form id="formCadastro">
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+            <input type="number" id="idade" placeholder="Sua Idade" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="senha" placeholder="Sua Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div class="auth-footer">
+            <p>Já tem uma conta? <a href="login.html">Faça Login</a></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/cadastro.js"></script>
+</body>
+
+</html>
