@@ -25,7 +25,7 @@ app.use(routerCarrinho)
 app.use(routerPedido)
 
 app.get("/",(req,res)=>{
-    res.sendFile(path.join(process.cwd(),"public","pages","index.html"))
+    res.sendFile(path.join(process.cwd(),"public","pages","cadastro.html"))
 })
 
 app.use(erros)
