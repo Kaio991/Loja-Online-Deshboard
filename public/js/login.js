@@ -43,7 +43,7 @@ if (formLogin) {
                 }).then(() => {
                     // 4. REDIRECIONAMENTO
                     // Se o login.html está em /pages/ e a index também, use "index.html"
-                    window.location.href = "index.html";
+                    window.location.href = "/pages/index.html";
                 });
 
             } else {
