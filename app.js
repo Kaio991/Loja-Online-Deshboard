@@ -17,7 +17,7 @@ const app = express();
 
 app.use(cors())
 app.use(express.json())
-app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.resolve(__dirname,"public")))
 conectarBanco()
 app.use(routerProdutos)
 app.use(routerUsuario)
@@ -25,7 +25,7 @@ app.use(routerCarrinho)
 app.use(routerPedido)
 
 app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"public","index.html"))
+    res.sendFile(path.resolve(__dirname,"public","index.html"))
 })
 
 app.use(erros)
