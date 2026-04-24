@@ -37,7 +37,7 @@ if (formCadastro) {
                     confirmButtonColor: '#28a745'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = "login.html";
+                        window.location.href = "/pages/login.html";
                     }
                 });
 
