@@ -247,7 +247,6 @@ header {
 }
 
 /* --- ESTILOS DA PÁGINA DE PAGAMENTO --- */
-
 .body-pagamento {
     background-color: #121212;
     display: flex;
@@ -263,28 +262,8 @@ header {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
     text-align: center;
     border: 1px solid #f0c040;
-    /* O seu dourado padrão */
     max-width: 400px;
     width: 90%;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.pagamento-container h1 {
-    color: #f0c040;
-    font-size: 2rem;
-    margin-bottom: 10px;
 }
 
 .pedido-info {
@@ -322,87 +301,94 @@ header {
     cursor: pointer;
     transition: 0.3s;
     width: 100%;
-    margin-top: 10px;
 }
 
-.btn-confirmar:hover {
-    background-color: #d4a733;
-    letter-spacing: 1px;
-}
-
-.btn-voltar {
-    margin-top: 20px;
-    display: block;
-    color: #888;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-voltar:hover {
-    color: #f0c040;
-}
-
-/* Badges de Status no Histórico */
 .status-badge {
     padding: 6px 15px;
     border-radius: 50px;
     font-size: 0.7rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .status-badge.pago {
     background-color: #2ecc71;
-    /* Verde */
     color: #fff;
-    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
 }
 
 .status-badge.aguardando-pagamento {
     background-color: #f1c40f;
-    /* Amarelo */
     color: #000;
 }
 
-/* --- CONFIGURAÇÕES PARA CELULAR (RESPONSIVIDADE) --- */
+/* --- CONFIGURAÇÕES PARA PREENCHIMENTO TOTAL NO CELULAR --- */
 @media screen and (max-width: 768px) {
 
-    /* 1. Faz a grade de produtos virar uma coluna única */
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 15px 10px;
+        height: auto;
+        gap: 15px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
     .produtos-grid {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
         padding: 10px;
+        width: 100%;
     }
 
-    /* 2. Ajusta o Header para não esmagar os elementos */
-    header {
-        flex-direction: column;
-        height: auto;
-        /* Deixa o header crescer conforme o conteúdo */
-        padding: 15px;
-        text-align: center;
-    }
-
-    /* 3. Garante que os cards de produto ocupem a largura da tela */
     .produto-card {
-        width: 90% !important;
-        /* Ajusta para quase a largura total do celular */
-        max-width: 350px;
+        width: 95% !important;
+        max-width: none;
+        margin-bottom: 15px;
     }
 
-    /* 4. Ajusta títulos e textos grandes */
+    .produto-card img {
+        height: 250px;
+    }
+
+    .title-container {
+        margin: 20px 0;
+    }
+
     .main-title {
-        font-size: 1.6rem;
-        margin-top: 20px;
+        font-size: 1.5rem;
+        width: 90%;
     }
 
-    /* Se tiver formulários de login/cadastro, ajusta a largura deles */
-    form {
-        width: 90% !important;
-        padding: 20px;
+    .auth-container,
+    .pagamento-container,
+    #formLogin,
+    #formCadastro {
+        width: 95% !important;
+        padding: 25px 15px;
+        max-width: none;
+    }
+
+    .btn-adicionar,
+    .btn-confirmar,
+    .auth-container button {
+        padding: 16px;
+        font-size: 1.1rem;
     }
 }
