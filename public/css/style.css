@@ -365,3 +365,44 @@ header {
     /* Amarelo */
     color: #000;
 }
+
+/* --- CONFIGURAÇÕES PARA CELULAR (RESPONSIVIDADE) --- */
+@media screen and (max-width: 768px) {
+
+    /* 1. Faz a grade de produtos virar uma coluna única */
+    .produtos-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    /* 2. Ajusta o Header para não esmagar os elementos */
+    header {
+        flex-direction: column;
+        height: auto;
+        /* Deixa o header crescer conforme o conteúdo */
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* 3. Garante que os cards de produto ocupem a largura da tela */
+    .produto-card {
+        width: 90% !important;
+        /* Ajusta para quase a largura total do celular */
+        max-width: 350px;
+    }
+
+    /* 4. Ajusta títulos e textos grandes */
+    .main-title {
+        font-size: 1.6rem;
+        margin-top: 20px;
+    }
+
+    /* Se tiver formulários de login/cadastro, ajusta a largura deles */
+    form {
+        width: 90% !important;
+        padding: 20px;
+    }
+}
