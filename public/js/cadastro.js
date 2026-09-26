@@ -11,7 +11,7 @@ if (formCadastro) {
         const cargo = "cliente";
 
         try {
-            const response = await fetch('https://loja-online-deshboard-production.up.railway.app/usuarios/cadastro',{
+            const response = await fetch('https://loja-online-deshboard.onrender.com/usuarios/cadastro',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -32,7 +32,7 @@ document.getElementById('btn-finalizar').onclick = async () => {
 
     try {
         // 3. Chamada para o Back-end
-        const res = await fetch("https://loja-online-deshboard-production.up.railway.app/checkout", {
+        const res = await fetch("https://loja-online-deshboard.onrender.com/checkout", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

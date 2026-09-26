@@ -15,7 +15,7 @@ async function carregarProdutos() {
     const listaProdutos = document.getElementById('lista-produtos');
 
     try {
-        const response = await fetch('https://loja-online-deshboard-production.up.railway.app/produtos/listar');
+        const response = await fetch('https://loja-online-deshboard.onrender.com/produtos/listar');
         if (!response.ok) throw new Error('Servidor offline ou rota inválida');
 
         const data = await response.json();
@@ -59,7 +59,7 @@ async function adicionarAoCarrinho(id, nome, preco, imagem) {
 
     try {
         // 1. SALVA NO BANCO (MySQL) - Isso resolve o erro 400 do checkout
-        const response = await fetch('https://loja-online-deshboard-production.up.railway.app/carrinho', {
+        const response = await fetch('https://loja-online-deshboard.onrender.com/carrinho', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
