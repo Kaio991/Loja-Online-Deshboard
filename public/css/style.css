@@ -416,4 +416,9 @@ header {
         font-size: 1rem;
         width: 100%;
     }
+
+    /* Trava o zoom automático ao clicar em inputs no telemóvel */
+    input, select, textarea {
+        font-size: 16px !important;
+    }
 }
