@@ -7,7 +7,7 @@ const sequelize = new Sequelize(url, {
     dialectOptions: {
         ssl: {
             require: true,
-            rejectUnauthorized: false // Necessário para conexões externas/seguras no Render
+            rejectUnauthorized: false 
         }
     }
 });

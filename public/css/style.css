@@ -25,6 +25,7 @@ a {
     align-items: center;
     min-height: 100vh;
     background: #0f0f0f;
+    padding: 15px;
 }
 
 .auth-container {
@@ -32,7 +33,7 @@ a {
     padding: 40px;
     border-radius: 15px;
     border: 1px solid #333;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -50,9 +51,11 @@ a {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
 }
 
 .auth-container input {
+    width: 100%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #444;
@@ -67,6 +70,7 @@ a {
 }
 
 .auth-container button {
+    width: 100%;
     background: #f0c040;
     color: #000;
     border: none;
@@ -104,6 +108,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .header-right {
@@ -252,7 +257,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 15px;
 }
 
 .pagamento-container {
@@ -263,7 +269,7 @@ header {
     text-align: center;
     border: 1px solid #f0c040;
     max-width: 400px;
-    width: 90%;
+    width: 100%;
 }
 
 .pedido-info {
@@ -281,11 +287,13 @@ header {
     border-radius: 12px;
     margin: 20px auto;
     width: fit-content;
+    max-width: 100%;
 }
 
 .pix-box img {
     width: 180px;
     height: 180px;
+    max-width: 100%;
     display: block;
 }
 
@@ -321,11 +329,12 @@ header {
     color: #000;
 }
 
-/* --- CONFIGURAÇÕES RESPONSIVAS PARA CELULAR --- */
+/* --- CONFIGURAÇÕES RESPONSIVAS PARA CELULAR (Evita zoom e quebras) --- */
 @media screen and (max-width: 768px) {
 
     body {
         overflow-x: hidden;
+        width: 100%;
     }
 
     header {
@@ -333,6 +342,7 @@ header {
         padding: 12px 15px;
         height: auto;
         gap: 12px;
+        width: 100%;
     }
 
     .header-right {
@@ -354,7 +364,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 15px 10px;
+        padding: 15px 12px;
         gap: 20px;
         width: 100%;
     }
@@ -371,18 +381,22 @@ header {
 
     .title-container {
         margin: 25px 0 15px 0;
+        padding: 0 10px;
     }
 
     .main-title {
         font-size: 1.3rem;
         letter-spacing: 1px;
+        max-width: 100%;
     }
 
     .auth-container,
     .pagamento-container {
-        width: 92% !important;
-        padding: 30px 20px;
-        margin: 0 auto;
+        width: 100% !important;
+        max-width: 100%;
+        padding: 25px 15px;
+        margin: 0;
+        border-radius: 12px;
     }
 
     #formLogin,
@@ -395,5 +409,6 @@ header {
     .auth-container button {
         padding: 14px;
         font-size: 1rem;
+        width: 100%;
     }
 }
