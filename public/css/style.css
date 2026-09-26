@@ -6,10 +6,12 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
+html, body {
     background-color: #0f0f0f;
     color: #fff;
     min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
 }
 
@@ -26,6 +28,7 @@ a {
     min-height: 100vh;
     background: #0f0f0f;
     padding: 15px;
+    width: 100%;
 }
 
 .auth-container {
@@ -259,6 +262,7 @@ header {
     align-items: center;
     min-height: 100vh;
     padding: 15px;
+    width: 100%;
 }
 
 .pagamento-container {
@@ -332,9 +336,10 @@ header {
 /* --- CONFIGURAÇÕES RESPONSIVAS PARA CELULAR (Evita zoom e quebras) --- */
 @media screen and (max-width: 768px) {
 
-    body {
+    html, body {
         overflow-x: hidden;
         width: 100%;
+        max-width: 100vw;
     }
 
     header {
